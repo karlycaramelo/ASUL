@@ -1,0 +1,111 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Resumen 02: Primera Ayudantía}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	29/Enero/2019 
+	
+	 
+
+\end{titlepage}
+
+La segunda clase tocó con el Ayudante, principalmente hablamos de comandos básicos de Linux y hubo una breve una introducción al concepto \textbf{Variable de entorno}, una variable de entorno es un valor dinámico cargado en la memoria, que puede ser utilizado por varios procesos que funcionan simultáneamente. También se habló sobre el concepto de \textbf{Variable Global}, una variable global es visible y valida en cualquier script de Bash, cualquier variable que se declare en bash por default es una variable global. A continuación enlistaré también los comandos vistos en clase. 
+
+\begin{itemize}
+ \item echo \$PATH: Sirve para ver las ubicaciones de los comandos a ejecutar.
+ \item man(Manual): Sirve para ver información sobre los comandos.
+ \item env: Si env se ejecuta sin ninguna opción, muestra las variables del entorno actual. De lo contrario, env establece cada nombre para un valor y ejecuta el comando.
+ \item printenv: Imprime la(s) variable(s) de entorno específicadas en caso de no ser estar especificada dicha(s) variable(s), entonces se imprimen pares y valores de todas las variables de entorno.
+ \item grep(global regular expression print): procesa el texto línea por línea e imprime cualquier línea que coincida con un patrón específico.
+ \item cat: sirve para visualizar archivos de texto, combinar copias de ellos y crear nuevos.
+ \item source: se puede usar para cargar cualquier archivo de funciones en el script de shell actual o en un prompt.
+ \item ps: Sirve para ver los procesos corriendo en el sistema.
+ \item top: Permite a los usuarios monitorear los procesos y el uso de recursos del sistema en Linux.
+ \item ls -la: Sirve para ver archivos ocultos.
+ \item nano .bashrc: nano es un editor de texto que sirve para abrir .bashrc, 
+el archivo .bashrc es un script de shell que se ejecuta cada vez que un usuario abre un nuevo shell.
+\end{itemize}
+\newpage
+Cuando se utiliza el comando \textbf{ps} aparecen las siglas  PID TTY(como se muestra en la siguiente imagen), el ayudante pidió que se investigara cuál es el significado de estas.
+
+\begin{center}
+ \includegraphics[scale=0.30]{1.png}
+\end{center}
+
+\begin{tabular}{ll}
+PID &- Es el número de Procesos\\
+TTY &- Es el nombre de la consola en la que el usuario\\ &ha iniciado sesión.
+\end{tabular}
+
+Se mencionó que los estados de un proceso son dos:
+\begin{itemize}
+ \item Ready
+ \item Pause
+\end{itemize}
+
+por último se mostró en clase la estructura de como definir una función en bash y se hace de la siguiente manera:
+\begin{verbatim}
+                    Nombre_Función(){
+                      < Comandos >
+                    }
+\end{verbatim}
+
+\end{document}
