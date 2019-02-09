@@ -1,0 +1,75 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Resumen 08: Llamadas al Sistema}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	07/Febrero/2019 
+	
+	 
+
+\end{titlepage}
+En esta clase se habló sobre llamadas al sistema, algunos comandos, y se mencionó el concepto de \textbf{Kernel Monolítico}, es una arquitectura de sistema operativo, en la que todo el sistema operativo (que incluye controladores de dispositivo, el sistema de archivos y la aplicación IPC) funciona en el espacio del kernel. Un Kernel Monolítico puede cargar y descargar módulos ejecutables dinámicamente en tiempo de ejecución.
+\section*{Llamadas:}
+Una \textbf{llamada al sistema} es una interfaz entre una aplicación del espacio del usuario y un servicio que provee el kernel, por mi cuenta leí que una manera de hacer una llamada al sistema es crear tu propio programa en C y desde tu software realizar las llamadas. También hay llamadas al sistema en \textbf{ensamblador} estas llamadas en \textbf{Linux} se realizan al sistema por medio de la línea de interrupción por software número 0x80 (es decir cuando haces un llamada al sistema haces una interrupción al procesador para que atienda tu petición) y los parámetros de las mismas se pasan usando los registros del procesador. En \textbf{EAX} se guarda el número de la llamada al sistema que estamos invocando estos números están guardados en el directorio \textbf{usr/include/asm/unistd.h}, luego los parámetros serán pasados en los registros siguientes \textbf{EBX, ECX, EDX, ESI} y \textbf{EDI} (son registros especiales para el paso de parámetros).
+
+\section*{Algunos otros conceptos vistos en clase:}
+Se mencionó que los procesos podrían estar en \textbf{foreground} o \textbf{background} practicamente esto significa en primer plano y segundo plano, por ejemplo si estamos utilizando un programa para editar texto en este preciso momento, está en primer plano (foreground), si tienes algún otro programa abierto, pero que no esta siendo utilizado se puede decir que se encuentra en segundo plano(background). Un \textbf{comando} que es de utilidad para continuar con algún proceso que haya sido detenido es \textbf{fg}, esté lo que hace es ``activar'' nuevamente el proceso detenido y lo corre en ``foreground''. Otro concepto que se menciono no muy a profundidad fue el \textbf{scheduler}, que es el ``calendarizador'' es en dónde el procesador tiene organizadas las tareas del sistema y las va ejecutando por prioridad.
+\end{document}

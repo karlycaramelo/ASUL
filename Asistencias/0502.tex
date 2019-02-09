@@ -1,0 +1,79 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Resumen 06: Páginas del Manual}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	05/Febrero/2019 
+	
+	 
+
+\end{titlepage}
+
+En esta clase vimos como por medio de \textbf{groff} (es un sistema de composición tipográfica, software de texto plano) se le da como entrada un texto plano y genera una salida una página del manual. Groff permite especificar los preprocesadores por opciones de linea de comandos y ejecuta automáticamente el postprocesador que es apropiado para el dispositivo seleccionado.\\
+El programa \textbf{grog} se puede usar para adivinar la linea de comandos de groff correcta para formatear un archivo. El programa \textbf{groffer} es un visor general para archivos groff y páginas de manual. En los siguientes directorios pueden guardarse los archivos de texto plano.
+\section*{Directorios:}
+\begin{itemize}
+ \item /usr/share/man/man<número> (número puede ser entre 1-8, este depende de la categoría que quieras utilizar)
+ \item /usr/local/man/man<número> (número puede ser entre 1-8, este depende de la categoría que quieras utilizar)
+\end{itemize}
+
+
+\end{document}
