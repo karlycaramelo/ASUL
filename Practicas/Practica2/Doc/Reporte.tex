@@ -1,0 +1,146 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Practica 2: 08/Febrero/2019}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumnos:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán url{https://github.com/karlycaramelo} \\
+    Eric Giovanni Miguel Torres url{https://github.com/EricGiovanni}\\ 
+    María Ximena Lezama Hernández url{https://github.com/LezamaXi}\\ 
+    Gonzalo Vazquez Cruz url{https://github.com/truerandom}} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	%\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	%01/Febrero/2019 
+	
+	 
+
+\end{titlepage}
+\newpage
+\section*{Descripción:}
+La practica fue sobre procesamiento de texto, se nos pidió elegir del directorio /\ var/\ log/\ algunos archivos de texto plano y utilizar los comandos vistos en clase para obtener las estadísticas de cada uno de estos. A continuación enlistaré los textos que procesamos.
+\begin{center}
+ \includegraphics[scale=0.30]{1.png}
+\end{center}
+
+\begin{itemize}
+ \item dmesg
+ \item history.log
+ \item auth.log
+ \item alternatives.log
+\end{itemize}
+
+\section*{Funciones Utilizadas:}
+\begin{verbatim}
+ messages(){
+	devices=`dmesg | grep ':'  | grep -v '\.\.' |  sed 's/.*] //g' 
+	| cut -d ':' -f 1 | cut -d ' ' -f 1 | sort -u`
+
+	for dev in $devices
+	do
+		stats=`dmesg | grep $dev | wc -l`
+		echo $dev "->" $stats
+	done
+}
+
+history(){
+	devices=`cat /var/log/apt/history.log | grep 'Requested-By' 
+	| cut -d ' ' -f 2 | sort -u`
+
+	for dev in $devices
+	do
+		stats=`cat /var/log/apt/history.log | grep $dev | wc -l`
+		echo $dev "->" $stats
+	done
+}
+
+auth(){
+	devices1=`cat /var/log/auth.log | grep 'FAILED' | cut -d ':' -f 4 
+	| sort -u | cut -d 'y' -f 2`
+	devices2=`cat /var/log/auth.log | grep 'Successful' | cut -d ':' -f 4 
+	| sort -u | cut -d 'y' -f 2`
+
+	for dev in $devices1
+	do
+		stats=`cat /var/log/auth.log | grep $dev | wc -l`
+		echo "FAILED -> " $dev "->" $stats
+	done
+
+	for dev2 in $devices2
+	do
+		stats2=`cat /var/log/auth.log | grep $dev2 | wc -l`
+		echo "Successful -> " $dev2 "->" $stats2
+	done
+}
+
+alternatives(){
+	devices=`cat /var/log/alternatives.log | grep 'update-alternatives' 
+	| sort -u`
+
+	for dev in $devices
+	do
+		stats=`cat /var/log/alternatives.log | grep $dev | wc -l`
+		echo "Numero de actualizaciones: " $dev "->" $stats
+	done
+}
+
+alternatives
+\end{verbatim}
+
+El archivo con el código fuente se encuentra en la carpeta src.
+
+\end{document}
