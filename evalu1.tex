@@ -1,0 +1,238 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage{hyperref}
+\usepackage[spanish]{babel}
+\usepackage{biblatex}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Evaluación 1}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	Administración de Sistemas Unix/Linux
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	15/Marzo/2019 
+	
+	 
+
+\end{titlepage}
+
+\begin{enumerate}
+    \item ¿Dentro de qué contexto se habló del término Partición? y¿ cuál la utilidad del uso
+    de particiones?
+
+    \textbf{Respuesta:} Una partición es una división que se hace dentro del disco duro físico para poder guardar información en una parte específica del mismo. Hay \textbf{Particiones Primarias} en estas se instalan los sistemas operativos y son las que detecta el sistema de arranque, \textbf{Particiones Secundarias} se utilizan para guardar datos y pueden éstas pueden ser particionadas  y \textbf{Particiones Lógicas} éstas particiones lógicas son las que se hacen dentro de la partición secundaria, se les asigna un sistema de archivos(FAT32, NTFS, ext2, etc.).
+
+    \item ¿Cuál es la diferencia entre los sistemas operativos de propósito general y los de
+    propósito específico?\\
+    \textbf{Respuesta:} Las diferencias básicas entre ambos tipos de sistema operativo, es que los de propósito general van dirigidos a todo público, puden realizar tareas básicas y no es necesario que el usuario tenga conocimiento profundo en el funcionamiento lógico de la computadora. El Sistema operativo de uso espécifico es un sistema que se diseña para cumplir únicamente con una tarea en concreto o con un grupo de aplicaciones. 
+
+    \item ¿Qué significan las siglas POSIX?\\
+    \textbf{Respuesta:} Portable Operating System Interface.
+    
+    \item ¿A qué público está dirigido el estándar POSIX?\\
+    \textbf{Respuesta:}
+    \begin{itemize}
+        \item Personas que compran sistemas de hardware y software.
+        \item Personas que gestionan empresas que deciden sobre futuras direcciones de computación corporativa.
+        \item Personas implementando sistemas operativos, y especialmente.
+        \item Personas desarrollando aplicaciones donde la portabilidad es un objetivo.
+    \end{itemize}
+    
+    \item 5. La última modificación del estándar POSIX se basó en nueve principios básicos,
+    indique cuáles son y explique por lo menos tres.\\
+    \textbf{Respuesta:}
+    \begin{itemize}
+        \item Orientación a la Aplicación (Application-Oriented): 
+    El objetivo básico era promover la portabilidad de los programas de aplicación en los entornos de sistema UNIX mediante el desarrollo de un estándar claro, coherente y no ambiguo para la especificación de la interfaz de un sistema operativo portátil basado en la documentación del sistema UNIX. Este estándar codifica la definición común y existente del sistema UNIX.
+        \item Interfaz, no implementación (Interface, no implementation).
+        \item Fuente, No objeto, Portabilidad (Source, Not object, Portability).
+        \item El Lenguaje C (The C Language).
+        \item Sin superusuario, sin administración del sistema (No superuser, no system administration): 
+    No había intención de especificar todos los aspectos de un sistema operativo. Las instalaciones y funciones de administración del sistema están excluidas de esta norma, y no se han incluido las funciones utilizables solo por el superusuario. Aún así, una implementación de la interfaz estándar también puede implementar características que no están en esta norma. Este estándar tampoco está relacionado con las restricciones de hardware o el mantenimiento del sistema.
+        \item Interfáz mínima, definida mínimamente (Minimal interface, Minimally defined).
+        \item Ampliamente implementable (Broadly Implementable).
+        \item Cambios mínimos a las implementaciones históricas (Minimall Changes to Historical implementations).
+        \item Cambios mínimos en el código de aplicación existente (Minimal changes to existing application code): Un objetivo de este estándar era minimizar el trabajo adicional para los desarrolladores de aplicaciones. Sin embargo, debido a que cada implementación histórica conocida tendrá que cambiar al menos ligeramente para ajustarse, algunas aplicaciones tendrán que cambiar.
+
+
+    \end{itemize}
+    
+    \item ¿Cuántos y cuáles son temas en los que está dividido el estándar POSIX?\\
+    \textbf{Respuesta:} Los diferentes "issues" o temas de POSIX son los siguientes:
+    \begin{itemize}
+        \item POSIX.1
+        \item POSIX.1b
+        \item POSIX.1c
+        \item POSIX.2
+        \item POSIX.1-2001
+        \item POSIX.1-2004
+        \item POSIX.1-2008
+        \item POSIX.1-2017
+        
+    \end{itemize}
+    
+    \item ¿Cuáĺ es el título del libro que sacó de la biblioteca?\\
+    \textbf{Respuesta:} Linux For Begginers.
+    \item ¿Cuáles son los temas que trata el libro?\\
+    \textbf{Respuesta:} Es un libro de introducción a Linux que intenta que te familiarices con el sistema operativo, habla sobre comandos y funcionamiento básico.
+    
+    
+    
+    \item ¿Cuál es la diferencia entre archivos de texto y archivos binarios, mencione cinco
+    ejemplos de cada tipo?\\
+    \textbf{Respuesta:} 
+    \textbf{Los archivos binarios} suelen contener una secuencia de bytes o agrupaciones ordenadas de ocho bits. Al crear un formato de archivo personalizado para un programa, un desarrollador organiza estos bytes en un formato que almacena la información necesaria para la aplicación. Los formatos de archivos binarios pueden incluir múltiples tipos de datos en el mismo archivo, como datos de imagen, video y audio. Estos datos se pueden interpretar mediante programas de soporte, pero se mostrarán como texto confuso en un editor de texto. A continuación se muestra un ejemplo de un archivo de imagen .PNG abierto en un visor de imágenes y un editor de texto.\\
+    \textbf{Los archivos de texto} son más restrictivos que los archivos binarios, ya que solo pueden contener datos textuales. Sin embargo, a diferencia de los archivos binarios, es menos probable que se corrompan. Si bien un pequeño error en un archivo binario puede hacer que sea ilegible, un pequeño error en un archivo de texto simplemente puede aparecer una vez que el archivo ha sido abierto.
+
+    \textbf{Ejemplos de archivo de texto:} .DOCX, .txt, .XML.\\
+    \textbf{Ejemplo de archivo binario:}  .jpg, .png, .gif.
+
+
+    \item ¿Cuaĺ es la diferencia entre archivos de texto y archivos ejecutables en Linux,
+    mencione cinco ejemplos de cada uno? ¿y En Windows?\\
+    \textbf{Respuesta:} Un archivo ejecutable es un archivo binario, diseñado para poder iniciar un programa mientras que un archivo de texto solo está conformado por caracteres. En Windows lo mismo.
+
+    \item ¿En Linux cómo identifico si un archivo es de texto o binario?\\
+    \textbf{Respuesta:} Utilizando el comando \textbf{file *} obtenemos información sobre el tipo de los archivos.
+    
+    \item busca.sh ¿es un archivo de texto, binairio o ejecutable?, justifique su respuesta\\
+    \textbf{Respuesta:} Es un archivo ejecutable lo que implica que es binario, pues por default en Linux los archivos .sh pueden ejecutarse por medio de llamadas al sistema.
+    
+    \item ¿Qué es una variable de entorno?\\
+    \textbf{Respuesta:} Se usan para configurar el entorno del usuario, esto afecta al comportamiento de los procesos de la computadora.
+    
+    \item ¿Cuál, o cuáles, son las variables que controlan el prompt?, por cierto ¿Qué es el
+    prompt?\\
+    \textbf{Respuesta:}
+    \begin{itemize}
+        \item PS1: solicitud interactiva predeterminada (esta es la variable más a menudo personalizada)
+        \item PS2: indicador interactivo de continuación (cuando se divide un comando largo con \ al final de la línea) default = $">"$
+        \item PS3: indicador utilizado por el bucle "seleccionar" dentro de un script de shell
+        \item PS4: se usa cuando se ejecuta un script de shell en modo de depuración ("set -x" lo activará) default = $"++"$
+        \item PROMPT\_COMMAND: si esta variable está configurada y no tiene un valor nulo, se ejecutará justo antes de la variable PS1.
+    \end{itemize}
+    \textbf{El prompt} es la serie de caracteres que se muestran a la izquierda de la consola, con el nombre del usuario a la espera de recibir ordenes.
+    \item ¿Cuál es la utilidad de la variable de entorno IFS?\\
+    \textbf{Respuesta:} Es utilizado por el shell para determinar cómo hacer la división de palabras (alcances de las palabras).
+    \item ¿Qué es un script?\\
+    \textbf{Respuesta:} Es un archivo de procesamiento, usualmente de texto plano.
+    
+    \item ¿Cómo se define el intérprete que utilizará el script?\\
+    \textbf{Respuesta:} Por medio de una linea de código o comando, que definirá en que programa se va a interpretar el script.
+    
+    \item ¿Cuáles son las formas de obtener información de los comandos en linux?\\
+    \textbf{Respuesta:} Puedes obtener uno a uno la información de los comandos por medio del comando man (que es el manual de Linux), o el comando info (lee la documentación).
+    
+    \item ¿Cuáĺ es la diferencia entre procesos en primer plano y procesos en segundo plano?\\
+    \textbf{Respuesta:}
+    Los procesos que se ejecutan en primer plano, tienen la característica de no regresar el control al usuario hasta concluir la ejecución del proceso.\\
+    Los procesos que se ejecutan en segundo plano no requieren esperar a que el proceso termine para regresar el control del intérprete de comandos al usuario.
+    \item ¿Cómo se envían señales a los procesos?\\
+    \textbf{Respuesta:} Por medio del comando kill, éste se usa para terminar procesos manualmente. El comando kill manda una señal a un proceso que termina el proceso. Si el usuario no especifica ninguna señal que se envíe junto con el comando kill, entonces se envía la señal TERM predeterminada que finaliza el proceso. Para ver las señales disponibles que pueden enviarse  los procesos se utiliza la bandera -l, es decir, kill -l. 
+
+    \item ¿Es posible que una red de computadoras funcione sin DNS, justifique su
+    respuesta?\\
+    \textbf{Respuesta:} Si, pero todo el mundo debería conocer las direcciones IP, que es algo complicado suponer que todo el mundo va a conocer las diferentes direcciones IP's de la red de computadoras.
+    \item ¿Es posible que una red de computadoras funcione sin NFS, justifique su
+    respuesta?\\
+    \textbf{Respuesta:} Si pues NFS es simplemente un protocolo para sistemas de archivos distribuidos, por ello no es necesario para el funcionamiento de una red de computadoras.
+    \item ¿Existe diferencia entre los términos librería y biblioteca?\\
+    \textbf{Respuesta:} La palabra en inglés \textbf{Library} es muchas veces es mal traducida al español como "Libreria", sin embargo librería es distinta de Library, pues librería es en dónde se compran libros, pero la palabra Library se traduce al español correctamente como \textbf{Biblioteca} que en lenguajes de programación es un conjunto de funciones que ayudan al desarrollo.
+    
+    \item ¿A qué se refieren los términos SCSI, SATA, PATA?\\
+    \textbf{Respuesta:} Son interfaces para transmisión de datos a discos duros.
+    
+    \item ¿Cuál es la diferencia entre RAID y LVM?\\
+    \textbf{Respuesta:} 
+    RAID y LVM son dos conceptos de almacenamiento de datos, la diferencia entre estos dos es la forma en que se almacenan los datos.
+    RAID se usa básicamente para redundancia  que se puede lograr mediante RAID1 y RAID5, utilizando múltiples discos duros. Mientras que, LVM proporciona más espacio en el disco en cualquier punto (es decir, puede aumentar el espacio del FS agregando más discos en el tiempo de ejecución) \textbf{Como
+    si fuera un único disco duro lógico}.
+    
+    \item ¿Cuál es la utilidad de los directorios del sistema operativo Linux que se han
+    revisado hasta el momento?\\
+    \textbf{Respuesta:}
+    \begin{itemize}
+        \item $/boot$ Contiene los archivos utilizados en el arranque del sistema operativo.
+        \item $/bin$ Contiene los programas ejecutables, estos están disponibles para alcanzar una funcionalidad para el sistema de arranque y reparación del sistema.
+        \item $/root$ Es el directorio raíz que contiene todos los demás directorios y sus subdirectorios, así como todos los archivos en el sistema.
+        \item $/tmp$ Es utilizado para almacenar los archivos temporales.
+        \item $/mnt$ Éste directorio y sus subdirectorios están diseñados para ser utilizados como puntos de montaje temporales para montar dispositivos de almacenamiento.
+    \end{itemize}
+    \item ¿Para qué sirven las combinaciones de teclas Ctrl + Alt + Fn y Atl + Fn?\\
+    \textbf{Respuesta:} En el caso de mi computadora permite cambiar pantallas, una en modo gráfico y la otra únicamente en modo interactivo sin interfáz gráfica (es decir solo la consola).
+    \item ¿Qué es el inicio seguro en una computadora?\\
+    \textbf{Respuesta:} Inicio seguro o modo a prueba de fallos, es un estado en dónde el sistema operativo inicia solamente utilizando sus componentes básicos, lo cual permite encontrar errores en componentes no base que estén fallando.
+    \item ¿Qué es, y para qué sirve, un módulo ?\\
+    \textbf{Respuesta:} Son fragmentos de código que pueden ser cargados y descargados del kernel en el momento que requieran, extiende la funcionalidad del kernel sin necesidad de reiniciar el sistema.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{Concepts} 
+Abraham Silberschatz, Peter Baer Galvin, Greg Gagne
+[\textit{Operating System Concepts Tenth Edition}]. 
+2018
+
+\bibitem{LinuxKernel} 
+Robert Love
+[\textit{Linux Kernel Development}]. 
+2010
+
+\bibitem{Wikipedia} 
+[\url{https://es.wikipedia.org/wiki/Wikipedia:Portada}]. 
+
+\bibitem{POSIX}
+[\url{https://www.opengroup.org/austin/papers/backgrounder.html}]
+\end{thebibliography}
+\end{document}
