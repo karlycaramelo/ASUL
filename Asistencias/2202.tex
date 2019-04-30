@@ -1,0 +1,95 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Sistema de Particiones}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	22/Febrero/2019 
+	
+	 
+
+\end{titlepage}
+
+\section*{Formatos:}
+\begin{itemize}
+    \item FAT: Éste sistema almacena la posición concreta del comienzo de cada archivo en el disco duro. Él archivo utiliza tantos bloques "básicos" (clusters) como necesite, para escribir el archivo completo en el disco.
+    Según el número de bits utilizados para describir las "direcciones" del disco, se tendrá un número mayor o menor de clusters disponibles.
+    
+    \item NTFS: Todo lo que tiene que ver con los ficheros se almacena en forma de metadatos. Esto permitió una fácil ampliación de características durante el desarrollo de Windows NT.
+    Los nombres de archivo son almacenados en Unicode (UTF-16), y la estructura de ficheros en árboles-B, una estructura de datos compleja que acelera el acceso a los ficheros y reduce la fragmentación, que era lo más criticado del sistema FAT.
+    
+\section*{Más sobre particiones:}
+Una partición es el nombre que se le da a cada división presente en una sola unidad física de almacenamiento de datos. Para que se entienda, tener varias particiones es como tener varios discos duros en un solo disco duro físico, cada uno con su sistema de archivos y funcionando de manera diferente.
+
+Las particiones pueden utilizarse para varios fines. Por una parte, puedes tener una dedicada a guardar datos sensibles con medidas de seguridad que no interfieran en el resto del sistema, así como copias de seguridad, aunque también puedes utilizarla para instalar diferentes sistemas operativos. En algunos de ellos, como los basados en GNU/Linux, también podrás estructurar el disco en particiones para los diferentes tipos de archivo que utilice el sistema operativo.
+
+Existen tres tipos de particiones, \textbf{las primarias}, \textbf{las extendidas} o \textbf{secundarias}, y las lógicas. A continuación tienes una descripción sobre cómo es cada una de ellas.
+\begin{itemize}
+    \item Partición primaria: Son las divisiones primarias del disco que dependen de una tabla de particiones, y son las que detecta el ordenador al arrancar, por lo que es en ellas donde se instalan los sistemas operativos. Puede haber un máximo de cuatro, y prácticamente cualquier sistema operativo las detectará y asignará una unidad siempre y cuando utilicen un sistema de archivo compatible. Un disco duro completamente formateado contiene en realidad una partición primaria ocupando todo su espacio.
+
+    \item Partición extendida o secundaria: Fue ideada para poder tener más de cuatro particiones en un disco duro, aunque en ella no se puede instalar un sistema operativo. Esto quiere decir que sólo la podremos usar para almacenar datos. Sólo puede haber una de ellas, aunque dentro podremos hacer tantas otras particiones como queramos. Si utilizas esta partición, el disco sólo podrá tener tres primarias, siendo la extendida la que actúe como cuarta.
+
+    \item Partición lógica: Son las particiones que se hacen dentro de una partición extendida. Lo único que necesitarás es asignarle un tamaño, un tipo de sistema de archivos (FAT32, NTFS, ext2,...), y ya estará lista para ser utilizada. Funcionan como si fueran dispositivos independientes, y puedes utilizarla para almacenar cualqueir archivo.
+
+\end{itemize}
+
+
+\end{itemize}
+\end{document}
