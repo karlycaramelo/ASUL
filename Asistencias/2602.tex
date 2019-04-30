@@ -1,0 +1,93 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Permisos de Directorios y GRUB}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	26/Febrero/2019 
+
+\end{titlepage}
+
+\section*{Permisos:}
+
+En GNU/Linux, los permisos o derechos que los usuarios pueden tener sobre determinados archivos contenidos en él se establecen en tres niveles claramente diferenciados. Estos tres niveles son los siguientes:
+\begin{itemize}
+    \item Permisos del propietario
+
+El propietario es aquel usuario que genera o crea un archivo/carpeta dentro de su directorio de trabajo (HOME), o en algún otro directorio sobre el que tenga derechos. Cada usuario tiene la potestad de crear, por defecto, los archivos que quiera dentro de su directorio de trabajo. En principio, él y solamente él será el que tenga acceso a la información contenida en los archivos y directorios que hay en su directorio HOME.
+
+\item Permisos del grupo
+
+Lo más normal es que cada usuario pertenezca a un grupo de trabajo. De esta forma, cuando se gestiona un grupo, se gestionan todos los usuarios que pertenecen a éste. Es decir, es más fácil integrar varios usuarios en un grupo al que se le conceden determinados privilegios en el sistema, que asignar los privilegios de forma independiente a cada usuario.
+
+\item Permisos del resto de usuarios
+
+Por último, también los privilegios de los archivos contenidos en cualquier directorio, pueden tenerlos otros usuarios que no pertenezcan al grupo de trabajo en el que está integrado el archivo en cuestión. Es decir, a los usuarios que no pertenecen al grupo de trabajo en el que está el archivo, pero que pertenecen a otros grupos de trabajo, se les denomina resto de usuarios del sistema.
+
+\end{itemize}
+\textbf{Para poder ver los permisos basta con utilizar el comando ls -l}
+
+\section*{Investigación sobre GRUB:}
+
+La idea de GRUB se originó en 1995 cuando Erich Boleyn hacía pruebas con GNU Hurd y un microkernel conocido como Mach 4 (o GNU Mach) y ante las incompatibilidades de los diversos métodos de arranque de la época decidió, junto con Brian Ford, crear la especificación Multiboot. Esta especificación brindaba una interfaz común entre el gestor de arranque y el sistema operativo, permitiendo que cualquier gestor de arranque pudiera iniciar cualquier sistema operativo siempre y cuando ambos cumplieran con el estándar. Una de las características más importantes de GRUB es su flexibilidad. Actualmente soporta los sistemas de archivos más populares, entre ellos: ext4, ReiserFS, XFS, HPS, FAT, NTFS y hasta el ISO 9660 para CDs o DVDs. También permite acceder a los datos de cualquier dispositivo instalado siempre y cuando sea reconocido por el BIOS.
+
+
+
+\end{document}

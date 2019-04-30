@@ -1,0 +1,89 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE PROTOCOLO X y X.ORG SERVER}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	01/Marzo/2019 
+	
+	 
+
+\end{titlepage}
+\section*{Protocolo X:}
+La comunicación entre el servidor y los clientes se hace mediante el intercambio de paquetes sobre un canal. La conexión se establece por el cliente (la forma en que el cliente se inicia no se ha especificado en el protocolo). El cliente también envía el primer paquete, que contiene el orden del byte a ser utilizado y la información sobre la versión del protocolo y el tipo de autenticación que el cliente espera que el servidor usará. La respuesta del servidor mediante el envío de un paquete de vuelta indica la aceptación o el rechazo de la conexión, o con una solicitud de una autenticación adicional. Si la conexión es aceptada, el paquete de aceptación contiene los datos que el cliente debe usar en la interacción posterior con el servidor.
+
+Después de que se establezca la conexión, cuatro tipos de paquetes son intercambiados entre el cliente y el servidor sobre el canal de comunicación:
+\begin{enumerate}
+    \item Petición: El cliente pide información al servidor o solicita que éste realice una acción.
+    \item Respuesta: El servidor responde a una petición. No todas las peticiones generan respuestas.
+    \item Evento: El servidor informa al cliente de un acontecimiento, tal como la entrada del teclado o del ratón, que una ventana está siendo movida, redimensionada, expuesta, etc.
+    \item Error: El servidor envía un paquete de error si una petición es inválida. Puesto que las respuestas están en cola, los paquetes de error generados por una petición pueden no enviarse inmediatamente.
+    Los paquetes de la petición y de la respuesta tienen una longitud diversa, mientras que los paquetes de eventos y de error tienen una longitud fija de 32 bytes.
+
+    
+\end{enumerate}
+Los paquetes de petición son numerados secuencialmente por el servidor tan pronto como los recibe: la primera petición de un cliente se numera 1, la segunda 2, etc. Los 16 bits menos significativos del número secuencial de una petición se incluyen en los paquetes de la respuesta y del error, si los hay, generados por la petición. También son incluidos en los paquetes de eventos, para indicar el número secuencial de la petición que el servidor está actualmente procesando o acaba de terminar de procesar.
+
+\section*{X.ORG SERVER}
+Xorg es una aplicación pública, una implementación en código abierto del sistema X window versión 11. Desde el momento que Xorg se convierte en la opción más popular entre los usuarios de Linux, su omnipresencia ha dado lugar a que sea un requisito cada vez más utilizado por las aplicaciones GUI (Graphical User Interface), con la consiguiente adopción masiva por la mayoría de las distribuciones. Consulte el artículo de Wikipedia sobre Xorg o visite el sitio web de Xorg para más detalles.
+
+\section*{Extra GUI Build System:}
+El sistema de compilación de GNU o GNU Build System, conocido también como Autotools, es un conjunto de herramientas producido por el proyecto GNU. Estas herramientas están diseñadas para ayudar a crear paquetes de código fuente portable a varios sistemas Unix. El GNU Build System forma parte de la cadena de herramientas de GNU y se usa mucho para desarrollar software libre. Aunque las herramientas que contiene el GNU Build System son GPL no existe ninguna restricción para crear software portable no libre con él.
+\end{document}

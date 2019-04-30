@@ -1,0 +1,100 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Modificación De Modulos y Paquetes}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	27/Febrero/2019 
+	
+\end{titlepage}
+\section*{¿Qué es un módulo?:}
+El kernel de Linux es modular porque permite insertar y eliminar código bajo demanda con el fin de añadir o quitar una funcionalidad. Algunas de las funcionalidades que podemos añadir al Kernel mediante los módulos del kernel son las siguientes:
+
+\begin{enumerate}
+    \item Usar los drivers privativos de nuestra tarjeta gráfica.
+    \item Registrar las temperaturas de componentes de nuestro ordenador.
+    \item Que los ventiladores de nuestro ordenador sean gestionados por el software creado por el fabricante de nuestro ordenador.
+    \item Hacer funcionar nuestro tarjeta de red wifi.
+\end{enumerate}
+Para ver los módulos del kernel basta aplicar el siguiente comando:\\
+\textbf{ls -R /lib/modules/\$(uname -r)}.
+Para saber los módulos utilizados basta con escribir el comando: \textbf{lsmod}.
+
+\section*{Paquetes en Linux:}
+Un paquete es un conjunto de ficheros relacionados con una aplicación, que contiene los objetos ejecutables, los archivos de configuración, información acerca del uso e instalación de la aplicación, todo ello agrupado en un mismo contenedor.  Encontramos los binarios y los que son el código fuente.
+
+\begin{itemize}
+    \item Paquetes binarios: Contienen código maquina, y no código fuente, por lo que cada tipo de arquitectura necesita su propio paquete. Encontramos estos tipos de paquetes binarios:
+\begin{itemize}
+    \item RPM Estos paquetes son utilizados por distribuciones Red Hat, Suse, Mandrake, Conectiva, Caldera, etc. 
+
+    \item DEB Estos paquetes son utilizados por distribuciones como Debian, y las basadas en ella, como Ubuntu. La utilidad para manejar este tipo de paquetes son apt  y dpkg.
+
+    \item TGZ Son utilizados por la distribución Linux Slackware.
+ 
+\end{itemize}
+
+\item Paquetes de código fuente: Contienen el código fuente del programa, estos vienen con los archivos necesarios para compilar e instalar el programa manualmente. Suelen presentarse en formato .tar.gz o tar.bz2 (osea compactado con tar y comprimido con gzip o bzip). Lo normal es que cada aplicación tenga la informacion en el fichero README o INSTALL de  como instalarlo.
+ 
+\end{itemize}
+
+
+
+\end{document}

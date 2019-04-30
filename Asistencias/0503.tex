@@ -1,0 +1,91 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Debian Netinst e Imagenes .iso}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	05/Marzo/2019 
+	
+	 
+
+\end{titlepage}
+En la clase se tocaron varios temas que ya habíamos visto con anterioridad como GRUB, Directorios y Permisos, los conceptos ya conocidos, lo nuevo fue \textbf{netinst}.
+
+\section*{¿Qué es Netinst?}
+Un netinst es un único CD que posibilita que instale el sistema completo, es un CD de instalación por red. Este único CD contiene sólo la mínima cantidad de software para comenzar la instalación y obtener el resto de paquetes a través de Internet. El tipo de conexión que puede ocuparse es PPP, Ethernet y red inalámbrica. La instalación es muy sencilla puesto que cuenta con una interfáz gráfica fácil de utilizar, es practicamente dar clic en "Siguiente".
+
+\section*{¿Qué es una Imagen .iso?}
+Una imagen ISO es un único archivo que contiene una estructura de datos de un sistema de archivos, incluyendo el arranque, las estructuras y sus atributos. Este archivo no posee ningún tipo de compresión, por lo que el tamaño de la imagen será aproximadamente la misma que la del conjunto de datos que almacene. La imagen ISO utilizan las extensiones de archivos .ISO o .IMG.Las imágenes ISO almacenan la imformación utilizando el protocolo ISO 9660, siendo también compatibles con el protocolo UDF (Universal Disk Format). En sus inicios la imagen ISO se utilizó solamente para almacenar una copia exacta del contenido de un soporte digital CD, DVD o Blu-Ray, de tal manera que podíamos volver a grabar esa imagen en un nuevo soporte virgen y obtener una copia exacta del original. La mayoría de sistemas operativos ofrecen la descarga de sus programas de instalación mediante una imagen ISO que nosotros tendremos que grabar en un soporte digital o en un pen drive y hacer que el ordenador lo inicie desde la BIOS.
+
+\section*{Extra Sobre Modificaciones al GRUB:}
+\begin{itemize}
+    \item GRUB\_DEFAULT= 0: Con la opción 0 hacemos que se seleccione por defecto la primera entrada (sistema), con la opción 1, la segunda y así sucesivamente. Si en cambio ponemos saved, hacemos que siempre se seleccione el último sistema al que se accedió.
+    \item GRUB\_HIDDEN\_TIMEOUT=0: Si descomentamos esta línea, oculta el menú de entradas del GRUB. Si ponemos un tiempo mas alto lo que hace es esconder el menú, pero esperarse un tiempo hasta continuar. Si en cambio comentamos la línea, mostrará el menú de entradas del GRUB.
+    \item GRUB\_HIDDEN\_MENU\_QUIET=true/false: Si está a “true” oculta la cuenta atrás , mientras que si está a “false” muestra la cuenta atrás (aparecerá en la zona inferior de la pantalla).
+    \item GRUB\_TIMEOUT=90: Esta línea indica el tiempo de espera (en segundos) hasta iniciar el sistema que tenemos como DEFAULT. Con un valor de -1, se desactiva la cuenta atrás y el valor será infinito.
+    \item GRUB\_CMDLINE\_LINUX\_DEFAULT=”quiet splash acpi\_osi=Linux”: En esta línea, la opción quiet agrupa las entradas iguales, con splash, tras elegir el sistema, se muestra la imagen de carga en vez de los mensajes del kernel. La tercera opción, acpi\_osi=Linux 
+    puede arreglar varios problemas de hardware en nuestro sistema Linux, como por ejemplo el brillo, tal y como explico en este otro post.
+    \item $GRUB\_GFXMODE=640x480$ ésta linea permite cambiar la resolución del GRUB.
+    \item GRUB\_DISABLE\_LINUX\_RECOVERY="true": Al descomentar esta línea, no aparezcerá la opción de recovery mode de los sistemas Linux en el menú.
+    
+\end{itemize}
+
+
+\end{document}
