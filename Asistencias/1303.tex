@@ -1,0 +1,88 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Conexión Remota SSH}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	13/Marzo/2019 
+	
+	 
+
+\end{titlepage}
+Para conectarnos al servidor SSH debemos seguir los siguientes pasos:
+\begin{itemize}
+    \item Escribir en la terminal el siguiente comando
+
+    \begin{verbatim}
+        ssh usuario@[IP]:[puerto]
+    \end{verbatim}
+
+    Por ejemplo:
+
+    ssh ruvelro@192.168.1.6:22
+    \item Pulsamos enter y se establecerá la conexión. Al ser un servidor seguro debemos crear la clave de seguridad y almacenarla en nuestro ordenador para futuras conexiones al mismo servidor. El mismo cliente nos preguntará si queremos crearla y continuar en caso de que no exista dicha clave.A continuación debemos introducir la contraseña del usuario con el que vamos a iniciar sesión.
+    \item Una vez introducida la contraseña el cliente SSH se conectará al servidor y nos cambiará tanto el usuario como el dominio de nuestro terminal. En nuestro caso aparecemos conectados como usuario pi a un servidor llamado raspberry.
+    \item De esta forma podremos controlar el sistema remoto como si estuviéramos delante de él en un terminal. Podremos realizar prácticamente cualquier tarea, especialmente si se trata de un servidor remoto Linux que es compatible con el 100\% de los comandos de SSH.
+    \item Para cerrar la conexión debemos teclear la palabra «exit» que finalizará la misma y evitar así que otros usuarios puedan tomar el control de nuestra conexión SSH remota.
+
+\end{itemize}
+    \section*{Extra}
+    Secure SHell (SSH), o intérprete de ordenes seguro, es un protocolo para acceder de forma remota a un servidor privado. Además, da nombre al programa que permite su implementación. El protocolo SSH o Secure SHell es un protocolo que posibilita el acceso y la administración de un servidor a través de una puerta trasera (backdoor). Y, a diferencia de otros protocolos como HTTP o FTP, SSH establece conexiones seguras entre los dos sistemas. Esto se produce recurriendo a la llamada arquitectura cliente/servidor.
+\end{document}

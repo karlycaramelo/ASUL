@@ -1,0 +1,90 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE IPTables}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	22/Marzo/2019 
+	
+	 
+
+\end{titlepage}
+Para Iniciar/Parar/Reiniciar Iptables debemos ejecutar estos comandos:
+\begin{itemize}
+    \item sudo service iptables start
+    \item sudo service iptables stop
+    \item sudo service iptables restart\\
+    También existen banderas dentro de IpTables
+    \begin{itemize}
+        \item -A –append $\rightarrow$ agrega una regla a una cadena.
+        \item -D –delete $\rightarrow$ borra una regla de una cadena especificada.
+        \item -R –replace $\rightarrow$ reemplaza una regla.
+        \item -I –insert $\rightarrow$ inserta una regla en lugar de una cadena.
+        \item -L –list $\rightarrow$ muestra las reglas que le pasamos como argumento.
+        \item -F –flush $\rightarrow$ borra todas las reglas de una cadena.
+        \item -Z –zero $\rightarrow$ pone a cero todos los contadores de una cadena.
+        \item -N –new-chain $\rightarrow$ permite al usuario crear su propia cadena.
+        \item -X –delete-chain $\rightarrow$ borra la cadena especificada.
+        \item -P –policy $\rightarrow$ explica al kernel qué hacer con los paquetes que no coincidan con ninguna regla.
+        \item -E –rename-chain $\rightarrow$ cambia el orden de una cadena.
+
+    \end{itemize}
+\end{itemize}
+\end{document}

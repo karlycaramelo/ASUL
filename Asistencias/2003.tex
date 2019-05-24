@@ -1,0 +1,81 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE HTTP, FTP y Axel}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	20/Marzo/2019 
+	
+	 
+
+\end{titlepage}
+\begin{itemize}
+    \item es el protocolo de transmisión de información de la World Wide Web, es decir, el código que se establece para que el computador solicitante y el que contiene la información solicitada puedan “hablar” un mismo idioma a la hora de transmitir información por la red. Con el http se establecen criterios de sintaxis y semántica informática (forma y significado) para el establecimiento de la comunicación entre los diferentes elementos que constituyen la arquitectura web: servidores, clientes, proxies. Fue creado en 1999 por el World Wide Web Consortium en colaboración con la Internet Engineering Task Force. Se trata de un protocolo “sin estado”, vale decir, que no lleva registro de visitas anteriores sino que siempre empieza de nuevo. La información relativa a visitas previas se almacena en estos sistemas en las llamadas “cookies”, almacenadas en el sistema cliente.
+    \item Un servidor FTP es un programa especial que se ejecuta en un equipo servidor normalmente conectado a Internet. Su función es permitir el intercambio de datos entre diferentes servidores/computadores. Por lo general, los programas servidores FTP no suelen encontrarse en los computadores personales, por lo que un usuario normalmente utilizará el FTP para conectarse remotamente a uno y así intercambiar información con él.
+    \item Axel intenta acelerar la descarga de procesos HTTP/FTP usando múltiples conexiones para cada archivo. Es muy ligero, no tiene dependencias y se puede utilizar como un clon de wget.
+    Para instalarlo en linux solo es necesario teclear:
+    \begin{verbatim}
+        sudo apt-get install axel
+    \end{verbatim}
+\section*{Extra}
+\textbf{Otro Acelerador de descargas}\\
+BitComet es utilizado por muchos usuarios para la descarga de torrents. Sin embargo también viene con soporte para HTTP y FTP. Por ello podemos usarlo como un administrador de descargas.Pese a que no tiene una apariencia visual tan interesante como otros programas similares, BitComet incluye todas las funciones esenciales de descarga de archivos.
+\end{itemize}
+\end{document}

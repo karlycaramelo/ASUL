@@ -1,0 +1,76 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE DHCP y NAT}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	11/Marzo/2019 
+	
+	 
+
+\end{titlepage}
+\begin{itemize}
+    \item En esta clase vimos protocolo de configuración de host dinámico y es un protocolo de red utilizado en redes IP donde un servidor DHCP asigna automáticamente una dirección IP y otra información a cada host en la red para que puedan comunicarse de manera eficiente con otros puntos finales. DHCP permite automatizar y gestionar de manera centralizada la asignación de direcciones IP en la red de una organización o de un proveedor de servicios de Internet (ISP).Un DHCP asigna dinámicamente direcciones IP en lugar de tener que depender de la dirección IP estática, el DHCP asignará una dirección que está disponible en una subred o pool. Esto significa que un equipo nuevo puede añadirse a una red sin necesidad de asignarle manualmente una dirección IP única. DHCP también puede combinar IP estáticas y dinámicas, además determina por cuánto tiempo una dirección IP es asignada a un dispositivo. Ambientes DHCP requieren un servidor DHCP configurado con los parámetros apropiados para la red propuesta. Los principales parámetros DHCP incluyen el rango o «pool» de direcciones IP disponibles, las máscaras de subred correcta, además de la puerta de enlace y las direcciones de nombre de servidor. Usar DHCP en una red significa que los administradores del sistema no necesitan configurar esos parámetros de forma individual en cada dispositivo del cliente, además simplifica la labor der administrador de la red ya que el software realiza un seguimiento de direcciones IP en lugar de requerir que e administrador gestione esa tarea.
+    El servidor DHCP es responsable de la asignación, arrendamiento, reasignación, y renovación las direcciones IP.
+    \item El NAT o Traducción de Direcciones de Red es un mecanismo que permite que múltiples dispositivos compartan una sola dirección IP pública de Internet, ahorrando así millones de direcciones públicas. Como ya deben de saber, el primer requisito para que cualquier dispositivo se pueda comunicar en una red IP de datos es que tenga asignada una dirección IP, ya sea de manera automática o manual. Generalmente se ven como 192.168.1.X o algo similar y las podemos ver revisando las propiedades del adaptador de red utilizado. 
+\end{itemize}
+\section*{Extra}
+El enrutamiento dinámico es el modo más sencillo de administrar el enrutamiento en un host. Los hosts que utilizan enrutamiento dinámico ejecutan los protocolos de enrutamiento que proporciona el daemon in.routed para IPv4 o el daemon in.ripngd para IPv6. Utilice el procedimiento siguiente para activar el enrutamiento dinámico de IPv4 en un host de interfaz única. Para obtener información adicional sobre el enrutamiento dinámico, consulte Reenvío de paquetes y rutas en redes IPv4.
+\end{document}
