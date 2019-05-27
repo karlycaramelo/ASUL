@@ -1,0 +1,81 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Redes}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	22/Abril/2019 
+	
+	 
+
+\end{titlepage}
+Hoy vimos un poco sobre redes y Linux, hablamos de la diversidad de usuarios y de los diversos usos.
+\begin{itemize}
+    \item El comando netstat debe su nombre a network statistics o estadísticas de red. Su labor básica es mostrar una lista de las conexiones entrantes y salientes activas en nuestra computadora. Con netstat podremos localizar problemas de red y comprobar si las conexiones se han realizado correctamente o si alguien algún socket o conexión se encuentran parados. Además de la lista por defecto, netstat se puede acompañar de diferentes opciones, como netstat -r para ver la tabla de enrutamiento o netstat -p para ver qué programas están conectados a sockets abiertos.
+    \item El comando host nos dice el nombre de una IP o viceversa, así como la información de una dirección DNS.A partir de una IP cualquiera, sabremos cuál es su nombre de dominio, y a partir del nombre de dominio, obtendremos la IP o direcciones IP asociadas. Host funciona tanto con IPv4 como con IPv6.
+
+    \item El comando ping es uno de los más básicos en redes, ya que nos dice si una IP o nombre de dominio funcionan correctamente o está caído. Para ello, ping envía pequeños paquetes a la dirección especificada para comprobar la conexión. Entre sus particularidades, el comando se ejecuta cada pocos segundos de manera automática, sin fin, a no ser que le indiquemos cuántas comprobaciones queremos. Por ejemplo, ping -c 10 para realizar diez comprobaciones.
+
+    \item  Comando Whois en relación a un dominio. Entre otras cosas, obtendremos datos como el dueño de ese dominio, su servidor y URL de referencia, servidores DNS asociados, estado, cuando se creó el dominio, cuándo se actualizó y cuando expirará. Para obtener más información, podemos ejecutar el comando en forma verbose con whois —verbose.
+
+    \item El comando ifconfig es uno de los más versátiles y completos en relación a redes, ya que entre otras cosas nos dice qué dirección IP tenemos asignada, cuál es la dirección MAC de nuestro dispositivo, etc. Ifconfig también sirve para asignar una IP concreta o para configurar varios parámetros de la red, como configurar una máscara con el comando ifconfig netmask. Además, ofrecen información útil como la cantidad de paquetes enviados y recibidos con o sin errores, paquetes descartados…
+\end{itemize}
+
+\end{document}

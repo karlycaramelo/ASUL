@@ -1,0 +1,76 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Configuración de Servicios systemctl}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	24/Abril/2019 
+	
+	 
+
+\end{titlepage}
+ Hoy se inició con la configuración de servicios de inicio de sistema de systemctl. Los servicios o demonios se gestionan mediante los demonios Init o Systemd. El primer servicio que inicia el Kernel de Linux es Init o Systemd. Seguidamente, init o systemd son los encargados de cargar el resto de servicios del sistema operativo. Por lo tanto Init o Systemd son los padres de todos los demonios o servicios que se inicializan en nuestro sistema operativo. Init y Systemd siempre están activos hasta que el sistema se apaga. Mientras estos servicios estén activos los podremos usar para gestionar los servicios que se inician y paran en nuestro ordenador o servidor. En el caso que systemd o init no se inicien, nuestro ordenador nunca podrá llegar a arrancar. Por lo tanto son demonios extremadamente importantes. Si queremos obtener información detallada sobre un servicio tan solo tenemos que ejecutar el comando systemctl help seguido del nombre del servicio que queremos analizar, como el siguiente comando:
+ \begin{verbatim}
+     systemctl help emergency
+ \end{verbatim}
+\section*{Extra}
+\textbf{¿Qué es un demonio en Linux?}\\
+Un demonio o servicio es un programa que se ejecuta en segundo plano, fuera del control interactivo de los usuarios del sistema ya que carecen de interfaz con estos. El término demonio se usa fundamentalmente en sistemas UNIX y basados en UNIX, como GNU/Linux o Mac OS X. En Windows y otros sistemas operativos se denominan servicios porque fundamentalmente son programas que ofrecen servicios al resto del sistema.
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE SELinux}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	12/Abril/2019 
+	
+	 
+
+\end{titlepage}
+Hoy vimos con el ayudante una introducción a SELinux, hablamos no a profundidad sobre su funcionamiento.
+Es una característica de seguridad de Linux que provee una variedad de políticas de seguridad, incluyendo el estilo de acceso a los controles del Departamento de Defensa de Estados Unidos, a través del uso de módulos de Seguridad en el núcleo Linux. No es una distribución de Linux, sino un set de modificaciones pueden ser aplicado a un sistema Tipo-Unix como Linux y BSD.
+
+\section*{Extra}
+\textbf{Políticas en SELinux}\\
+Las políticas de seguridad son una serie de reglas para autorizar y denegar operaciones. El módulo de seguridad del kernel (SELinux), valida o invalida operaciones en base a políticas de seguridad predefinidas. Cada proceso posee una política de seguridad asociada, que puede ser exclusiva para aquél o heredada del proceso que lo invocó.
+

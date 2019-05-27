@@ -1,0 +1,76 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Seguridad en Linux}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	10/Abril/2019 
+	
+	
+
+\end{titlepage}
+Las cuestiones de seguridad se pueden agrupar en varias categorías. Hablando en términos generales, dado que el tema de seguridad es muy amplio podemos distinguir en una primera categoría la protección que Linux proporciona al solicitar la identificación y contraseña la identificación a cada usuario para poder acceder al sistema de cualquiera de las formas posibles: local, remoto, etc. La segunda categoría es la protección de ficheros, tanto desde el sistema operativo, como de los ficheros de usuario. En tercer lugar, estaría el establecimiento de normas de seguridad frente ataques del sistema, así como la seguridad física de la propia máquina.En los siguientes apartados veremos algunos de los aspectos más básicos de la seguridad. Seguridad de acceso al sistema en la solicitud de identificación de usuario y de la contraseña constituye el primer control de seguridad para acceder al sistema. Los usuarios suelen elegir contraseñas sencillas y fáciles de recordar, lo que dificulta la tarea del administrador. Por eso el administrador debe recomendar algunas sugerencias para la selección de contraseñas, teniendo en cuenta el principio “las contraseñas complejas funcionan”:
+\begin{itemize}
+    \item Las contraseñas cuanto más largas mejor. Las contraseñas en Linux deben tener una longitud mínima de seis caracteres. Teóricamente no hay máximo pero algunos sistemas sólo reconocen los 8 primeros caracteres de la contraseña. No es excesivamente costoso un programa que, de manera aleatoria, trate de adivinar las contraseñas por ello cuanto más larga más tardará en encontrarla.
+    \item Nunca seleccione como contraseña una palabra del diccionario o una palabra que le identifique fácilmente, como su dirección, su nombre, hijos, número de teléfono, fecha de nacimiento, DNI.
+    \item Otro método puede ser memorizar una frase y seleccionar las iniciales de sus palabras.
+\end{itemize}
+
+\end{document}

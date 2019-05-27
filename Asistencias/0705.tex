@@ -1,0 +1,71 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\graphicspath{{Imagenes/}}
+
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE System Kickstart y Descargas automáticas}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	ADMINISTRACIÓN DE SISTEMAS UNIX/LINUX
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	07/Mayo/2019 
+	
+	
+
+\end{titlepage}
+Hablamos nuevamente de distribuciones de Linux y vimos algo llamado "instalaciones automatizadas" que tiene que ver con kickstart, que se vió la clase pasada. Actualmente existen muchas herramientas y plataformas para automatizar el despliegue de sistemas operativos. Desde las conocidas herramientas para crear instalaciones automáticas de Windows hasta, como no podía ser menos, herramientas profesionales de código abierto para Linux que nos permiten, precisamente, personalizar fácilmente hasta el más mínimo detalle del sistema que queramos instalar para que su despliegue sea lo más automático posible.\\
+Una de las herramientas para este fin es Kickstart. Este software es muy conocido especialmente entre los usuarios de Red Hat, aunque puede funcionar sin problemas con prácticamente cualquier otra distribución. Este software nos permite configurar una instalación de Linux, con su correspondiente configuración y puesta en marcha. Aunque podemos utilizar una interfaz gráfica, o la herramienta Anaconda, para configurar Kickstart, la plataforma preferida por los administradores de sistemas es Cobbler. Esta herramienta no es más que un servidor, diseñado por Red Hat, que nos permite configurar muy fácilmente todo tipo de servicios de red, como DHCP, TFTP, y DNS , así como crear rápidamente un entorno Kickstart para automatizar la instalación de cualquier sistema operativo.
+\end{document}
