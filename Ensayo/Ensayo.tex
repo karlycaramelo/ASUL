@@ -1,0 +1,98 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}} 
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{supertabular}
+\usepackage[spanish]{babel}
+\usepackage{hyperref}
+\graphicspath{{Imagenes/}}
+\usepackage{biblatex}
+\begin{document} 
+
+\begin{titlepage} 
+
+	\centering 
+	
+	\scshape 
+	
+	\vspace*{\baselineskip} 
+	
+	
+	
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} 
+	\rule{\textwidth}{0.4pt} 
+	
+	\vspace{0.75\baselineskip} 
+	
+	{\LARGE Ensayo sobre el curso}	
+	\vspace{0.75\baselineskip} 
+	
+	\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+	\rule{\textwidth}{1.6pt} 
+	
+	\vspace{2\baselineskip} 
+	
+
+	Administración de Sistemas Unix/Linux
+	
+	\vspace*{3\baselineskip} 
+	
+	
+	
+	Alumna:
+	
+	\vspace{0.5\baselineskip} 
+	
+	{\scshape\Large Karla Adriana Esquivel Guzmán \\} 
+	\vspace{0.5\baselineskip} 
+	\vfill
+	\includegraphics{unam.jpg}
+	
+	\textit{UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO} 
+	
+	\vfill
+	
+	
+	
+	
+	\vspace{0.3\baselineskip} 
+	
+	19/Junio/2019 
+	
+	 
+
+\end{titlepage}
+\section*{Opinión sobre temas del curso}
+Durante el curso obtuve varios conocimientos y experiencia en temas en los que antes no estaba familiarizada, algunos de los temas vistos en clase son los siguientes:
+\begin{enumerate}
+    \item Aprendimos a hacer scripts en bash, así como comandos básicos de Linux.
+    \item Instalamos y utilizamos tigerVNC para poder compartir la pantalla de una computadora a otra.
+    \item Aprendimos como configurar iptables y después utilizamos Samba para compartir archivos entre un sistema Debian y un Windows.
+    \item Instalamos Diversos Sistemas Operativos, desde los más comunes y de interfaz amigable con el usuario, hasta sistemas operativos que requieren de una configuración exhaustiva dependiendo del hardware y necesidades que tenemos.
+    \item En lo personal siento que aprendí mucho sobre manejo y sistema de archivos una de las partes más interesantes del curso para mi fue cuando vimos como recuperar información de un sistema operativo dañado montandolo sobre otro sistema operativo que si fuera funcional.
+    \item Me encantó en su totalidad la parte en que aprendimos a utilizar LXC aunque sinceramente siento que a esta parte del curso me hubiera gustado que dedicaramos más tiempo pues es de gran utilidad y además es entretenido.
+    \item SELinux me gustó aprender que existía este módulo, antes del curso nunca había escuchado nada al respecto, creo que a esto quizás hubiera sido bueno dedicarle algo más de tiempo, con algunos ejemplos de métodos sobre como cargar políticas o entender un poco más para que sirve utilizar SELinux en el "mundo real".
+    \item Me hubiera gustado que durante el curso, se nos mostraran softwares para encontrar vulnerabilidades, para saber si utilizamos servidores seguros o algunos temas de seguridad sobre el sistema de archivos.
+    \item Creo que también el curso sirvió bastante para aprender a explotar en su totalidad el uso de maquinas virtuales.
+\end{enumerate}
+\section*{Sobre Reportes, Ejercicios, Tareas y Practicas}
+\begin{enumerate}
+    \item Las asistencias creo que fueron la parte más complicada de cumplir durante el curso, pues en diversas ocasiones, se tenían que repetir los resumenes de varios días consecutivos por el hecho de que veíamos un mismo tema durante varias clases(aunque en general tuvimos muchos contratiempos por fallas en las computadoras o en la red de la facultad). Creo que sería buena idea que el próximo curso si se dejan resumenes continuos la asistencia se tome por semana, es decir, que solo se haga un resumen a la semana, hablando de lo que se vio durante la misma.
+    \item Creo que los ejercicios que se nos dejaron para hacer en casa o en las computadoras de la facultad, fueron buenos pues en general te hacen investigar por tu cuenta y aprendes bastante más, de hecho con el ejercicio de las Distribuciones de Linux y los contenedores (LXC) me entretuve bastante, el ejercicio de las distribuciones de Linux me ayudó a conocer un montón de nuevos Sistemas Operativos de uso más específico como SystemRescue o SteamOS.
+    \item Las tareas y reportes a veces me parecían un poco cansadas porque se tenía que escribir mucho, sin embargo también aportaban mucho conocimiento general y podría decirse que también "cultural" sobre los sistemas operativos y sobre computación como tal. El reporte de las noticias ayudaba a conocer temas variados de computación, desde historia hasta eventos para desarrolladores al rededor del mundo, la tarea de la reseña de los correos entre Tanenbaum y Linus Torvalds también fue de utilidad porque deja un tipo de enseñanza, a veces aunque gente muy experimentada menosprecie tu trabajo, es muy probable que si te esfurzas y te aferras a un objetivo, tendrá altas probabilidades de tener éxito.
+    \item Sobre las practicas, creo que en todas obtuvimos conocimientos nuevos y de utilidad, lo único que me hubiera gustado es que hubiera especificaciones documentadas por si durante la explicación no quedaba algo muy claro, pudieramos corroborar con algún archivo de texto si entendimos bien las indicaciones o no.
+\end{enumerate}
+\section*{Autoevaluación}
+\begin{itemize}
+    \item Tareas(Reportes, ejercicios, etcétera) 10, creo que merezco esta calificación porque cumplí con todas las tareas, ejercicios dejados para hacer en casa y en cada uno deje hechos reportes bien estructurados, con imagenes o capturas de pantalla.
+    \item Asistencias 9, creo que merezco 9 de calificación pues no me fue posible entregar algunas(están casi todas) sin embargo en las que entregué cumplí con las especificaciones que se pidió en caso de que se necesitara investigación adicional y cosas por el estilo.
+    \item Practicas 10, la única practica individual fue la de la compilación del Kernel de Linux, cargando módulos de acuerdo a las especificaciones de nuestra computadura, sin embargo las demás practicas fueron todas en equipo y considero que hicimos un buen trabajo, tenemos reporte de todas y cada una de las practicas con capturas de pantalla incluídas y especificaciones de cada paso que se tiene que hacer para cumplir con el objetivo de cada una de ellas.
+    \item Considero que durante el curso aprendí bastante, los conocimientos que adquirí probablemente los emplearé más de ahora en adelante y de hecho me dan bastantes ganas de continuar aprendiendo más sobre algunos temas que no pudimos ver más tiempo durante el curso. Creo que mis conocimientos antes del curso si eran demasiado básicos (aunque yo creía que no), pero ahora si me siento bastante más capaz de manejar un Sistema Linux.
+    
+\end{itemize}
+\end{document}
